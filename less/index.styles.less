@@ -1,0 +1,224 @@
+//Variables elements
+@brand-color: #135529;
+@contrast-color: #FFFBCE;
+@primary-neutral: #F0F1E8;
+@primary-action: #2CA555;
+
+//Imported fonts
+@import url("https://use.typekit.net/fwv7ydk.css");
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+nav {
+    background: @brand-color;
+    padding: 0 1rem;
+
+    a {
+        //Basic styling
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu, .submenu {
+        //Basic styling
+        list-style-type: none;
+    }
+
+    .menu {
+        //Mobile styling
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        //Tablet styling
+        @media (min-width: 700px) {
+            justify-content: center;
+        }
+
+        //Desktop styling
+        @media (min-width: 960px) {
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            background: none;
+        }
+
+        li a {
+            //Mobile styling
+            display: block;
+            padding: 15px 5px;
+        }
+
+        li.subitem a {
+            //Mobile styling
+            padding: 15px;
+        }
+
+        li.button a {
+            //Tablet styling
+            @media (min-width: 700px) {
+                padding: 10px 15px;
+                margin: 5px 0;
+            }
+        }
+    }
+
+    .logo {
+        //Basic styling
+        font-family: "futura-pt", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.25rem;
+        padding: 7.5px 10 7.5px 0;
+
+        //Tablet styling
+        @media (min-width: 700px) {
+            flex: 1;
+        }
+
+        //Desktop styling
+        @media (min-width: 960px) {
+            order: 0;
+        }
+    }
+
+    .toggle {
+        //Mobile styling
+        order: 1;
+        font-size: 1.25rem;
+
+        //Tablet styling
+        @media (min-width: 700px) {
+            flex: 1;
+            text-align: right;
+            order: 2;
+        }
+
+        //Desktop styling
+        @media (min-width: 960px) {
+            display: none;
+        }
+    }
+
+    .item {
+        //Basic styling
+        padding: 10px;
+
+        //Mobile styling
+        order: 3;
+        width: 100%;
+        text-align: center;
+        display: none;
+
+        //Desktop styling
+        @media (min-width: 960px) {
+            order: 1;
+            position: relative;
+            display: block;
+            width: auto;
+        }
+    }
+
+    .item.button {
+        //Basic styling
+        padding: 9px 5px;
+
+        //Mobile styling
+        order: 2;
+
+        //Tablet styling
+        @media (min-width: 700px) {
+            width: auto;
+            order: 1;
+            display: block;
+        }
+    }
+
+    .button {
+        //Desktop styling
+        @media (min-width: 960px) {
+            order: 2;
+        }
+    }
+
+    .button.secondary {
+        border-bottom: 1px @contrast-color solid;
+
+        //Tablet styling
+        @media (min-width: 700px) {
+            border: none;
+
+            a {
+                background: @primary-action;
+                border: 1px @primary-neutral solid;
+            }
+
+            a:hover {
+                background: @brand-color;
+                border: 1px @contrast-color solid;
+                color: @contrast-color;
+            }
+        }
+    }
+
+    .item:not(.button) a:hover, .item a:hover::after {
+        //Basic styling
+        border-bottom: 1px @contrast-color solid;
+        color: @contrast-color;
+    }
+
+    .active .item {
+        //Mobile styling
+        display: block;
+    }
+
+    //Submenu styling
+    .submenu {
+        //Basic styling
+        display: none;
+    }
+
+    .submenu-active .submenu {
+        display: block;
+
+        //Desktop styling
+        @media (min-width: 960px) {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 68px;
+            background: @brand-color;
+        }
+    }
+
+    .submenu-active {
+        background-color: @primary-action;
+        border-radius: 3px;
+
+        //Desktop styling
+        @media (min-width: 960px) {
+            border-radius: 0;
+        }
+    }
+
+    .has-submenu a i {
+        padding-left: 5px;
+    }
+
+    .subitem a {
+        padding: 10px 15px;
+    }
+}
