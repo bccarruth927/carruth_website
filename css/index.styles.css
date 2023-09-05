@@ -9,6 +9,7 @@
 html,
 body {
   height: 100%;
+  background: #F0F1E8;
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -159,6 +160,7 @@ nav .submenu-active .submenu {
     position: absolute;
     left: 0;
     top: 68px;
+    z-index: 2;
     background: #135529;
   }
 }
@@ -176,4 +178,176 @@ nav .has-submenu a i {
 }
 nav .subitem a {
   padding: 10px 15px;
+}
+@media (min-width: 700px) {
+  main #introduction .intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 710px;
+  }
+}
+@media (min-width: 960px) {
+  main #introduction .intro-container {
+    height: 720px;
+  }
+}
+main #introduction .intro-heading {
+  margin: 0 2rem 2rem 2rem;
+}
+@media (min-width: 700px) {
+  main #introduction .intro-heading {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0 2rem;
+    width: 45%;
+  }
+}
+main #introduction .intro-heading h1 {
+  padding: 1.25rem 0 1.5rem 0;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.75rem;
+  color: #135529;
+}
+@media (min-width: 700px) {
+  main #introduction .intro-heading h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 960px) {
+  main #introduction .intro-heading h1 {
+    font-size: 2.75rem;
+  }
+}
+main #introduction .intro-heading p {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  line-height: 1.6rem;
+}
+@media (min-width: 700px) {
+  main #introduction .intro-heading p {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+  }
+}
+@media (min-width: 960px) {
+  main #introduction .intro-heading p {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
+main #introduction .intro-heading button {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+  background-color: #2CA555;
+  border: none;
+  border-radius: 15px;
+}
+main #introduction .intro-heading button a {
+  text-decoration: none;
+  color: #fff;
+}
+main #introduction .intro-heading button a:hover {
+  color: #FFFBCE;
+}
+main #introduction .intro-heading button:hover {
+  box-shadow: 2px 2px 5px #000;
+}
+main #introduction .intro-swiper {
+  width: 100%;
+  margin: 2rem 0;
+}
+@media (min-width: 700px) {
+  main #introduction .intro-swiper {
+    width: 55%;
+    margin: auto 0;
+  }
+}
+main #introduction .intro-swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 700px) {
+  main #introduction .intro-swiper-slide {
+    height: 500px;
+  }
+}
+main #introduction .intro-swiper-slide .intro-slider-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+main #introduction .intro-swiper-slide .intro-slider-heading h3 {
+  margin-bottom: 3rem;
+  width: 100%;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px #135529;
+}
+main #introduction .intro-swiper-slide .intro-slider-heading button {
+  background: #2CA555;
+  border: none;
+  padding: 5px 10px;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  box-shadow: 4px 4px #135529;
+  cursor: pointer;
+}
+main #introduction .intro-swiper-slide .intro-slider-heading button a {
+  text-decoration: none;
+  color: #fff;
+}
+main #introduction .intro-swiper-slide .intro-slider-heading button a:hover {
+  color: #FFFBCE;
+}
+main #introduction .intro-swiper-slide .intro-slider-heading button:hover {
+  color: #FFFBCE;
+}
+main #introduction #concrete-services-slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url("../imgs/bg1.jpg");
+}
+main #introduction #aggregate-services-slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url("../imgs/bg2.jpg");
+}
+main #introduction #recycled-services-slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url("../imgs/bg3.jpg");
+}
+main #introduction #calculator-services-slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url("../imgs/bg4.jpg");
+}
+main #introduction #career-services-slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url("../imgs/bg5.jpg");
+}
+main #introduction .intro-swiper-prev,
+main #introduction .intro-swiper-next {
+  display: none !important;
+}
+@media (min-width: 700px) {
+  main #introduction .intro-swiper-prev,
+  main #introduction .intro-swiper-next {
+    display: block !important;
+    color: #2CA555 !important;
+  }
 }

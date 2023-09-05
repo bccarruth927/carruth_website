@@ -15,6 +15,7 @@
 
 html, body {
     height: 100%;
+    background: @primary-neutral;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -200,6 +201,7 @@ nav {
             position: absolute;
             left: 0;
             top: 68px;
+            z-index: 2;
             background: @brand-color;
         }
     }
@@ -220,5 +222,208 @@ nav {
 
     .subitem a {
         padding: 10px 15px;
+    }
+}
+
+main {
+
+    #introduction {
+        //Introduction responsive flex container
+        .intro-container {
+            @media (min-width: 700px) {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 710px;
+                //border: 1px red solid;
+            }
+
+            @media (min-width: 960px) {
+                height: 720px;
+            }
+        }
+
+        //Introduction heading styling
+        .intro-heading {
+            margin: 0 2rem 2rem 2rem;
+
+            //Tablet and Desktop styling
+            @media (min-width: 700px) {
+                display: flex;
+                align-items: center;
+                margin: 2rem 0;
+                padding: 0 2rem;
+                width: 45%;
+            }
+
+            h1 {
+                //Mobile styling
+                padding: 1.25rem 0 1.5rem 0;
+                font-family: "futura-pt", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 1.75rem;
+                color: @brand-color;
+
+                //Tablet styling
+                @media (min-width: 700px) {
+                    font-size: 2.25rem;
+                }
+
+                //Desktop styling
+                @media (min-width: 960px) {
+                    font-size: 2.75rem;
+                }
+            }
+
+            p {
+                //Mobile styling
+                font-size: 1.1rem;
+                padding: 0.5rem 0;
+                line-height: 1.6rem;
+
+                //Tablet styling
+                @media (min-width: 700px) {
+                    font-size: 1.5rem;
+                    line-height: 1.6rem;
+                }
+
+                //Desktop styling
+                @media (min-width: 960px) {
+                    font-size: 2rem;
+                    line-height: 2.3rem;
+                }
+            }
+
+            button {
+                margin: 2rem 0;
+                padding: 1rem 0;
+                width: 100%;
+                text-align: center;
+                font-family: "futura-pt", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 1.25rem;
+                background-color: @primary-action;
+                border: none;
+                border-radius: 15px;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                a:hover {
+                    color: @contrast-color;
+                }
+            }
+
+            button:hover {
+                box-shadow: 2px 2px 5px #000;
+            }
+        }
+
+        //Introduction card swiper
+        .intro-swiper {
+            width: 100%;
+            margin: 2rem 0;
+
+            @media (min-width: 700px) {
+                width: 55%;
+                margin: auto 0;
+            }
+        }
+
+        .intro-swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 450px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media (min-width: 700px) {
+                height: 500px;
+            }
+
+            .intro-slider-heading {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+
+                h3 {
+                    margin-bottom: 3rem;
+                    width: 100%;
+                    font-family: "futura-pt", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 1.5rem;
+                    color: #fff;
+                    text-align: center;
+                    text-shadow: 2px 2px @brand-color;
+                }
+    
+                button {
+                    background: @primary-action;
+                    border: none;
+                    padding: 5px 10px;
+                    font-family: "futura-pt", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 1.25rem;
+                    box-shadow: 4px 4px @brand-color;
+                    cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+
+                    a:hover {
+                        color: @contrast-color;
+                    }
+                }
+
+                button:hover {
+                    color: @contrast-color;
+                }
+            }
+        }
+
+        //Slider card backgrounds
+        #concrete-services-slide {
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg1.jpg");
+        }
+
+        #aggregate-services-slide {
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg2.jpg");
+        }
+
+        #recycled-services-slide {
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg3.jpg");
+        }
+
+        #calculator-services-slide {
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg4.jpg");
+        }
+
+        #career-services-slide {
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg5.jpg");
+        }
+
+        //Intro swiper navigation controls
+        .intro-swiper-prev, .intro-swiper-next {
+            //Mobile styling
+            display: none !important;
+
+            //Tablet and Desktop styling
+            @media (min-width: 700px) {
+                display: block !important;
+                color: @primary-action !important;
+            }
+        }
     }
 }

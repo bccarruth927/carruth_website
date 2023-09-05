@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/brands.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/solid.css">
+    <!--Swiper JS CSS stylesheet-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 
 <!--Body section-->
@@ -32,14 +34,79 @@
                     </ul>
                 </li>
                 <li class="item"><a href="#">Hiring</a></li>
+                <li class="item"><a href="#">Calculator</a></li>
                 <li class="item button secondary"><a href="#">Contact</a></li>
                 <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
         </nav>
     </header>
 
+    <!--Main content-->
     <main>
-
+        <!--Introduction section-->
+        <section id="introduction">
+            <div class="intro-container">
+                <article class="intro-heading">
+                    <div>
+                        <h1>
+                            Dependable, Quality Read Mix Concrete
+                        </h1>
+                        <p>
+                            Family owned and operated since 1976!
+                        </p>
+                        <p>
+                            It's our mission to be a dependable ready mix supplier to southern Maryland and northern Virgina.
+                        </p>
+                        <button><a href="tel:2404351104">Call for a Quote!</a></button>
+                    </div>
+                </article>
+                <!--Slider main container-->
+                <div class="intro-swiper swiper">
+                    <!--Additional required wrapper-->
+                    <div class="intro-swiper-wrapper swiper-wrapper">
+                        <!--Slides-->
+                        <!--Concrete Products Slide-->
+                        <div class="intro-swiper-slide swiper-slide" id="concrete-services-slide">
+                            <article class="intro-slider-heading">
+                                <h3>Concrete Products</h3>
+                                <button><a href="#">Learn More!</a></button>
+                            </article>
+                        </div>
+                        <!--Aggregate Products Slide-->
+                        <div class="intro-swiper-slide swiper-slide" id="aggregate-services-slide">
+                            <article class="intro-slider-heading">
+                                <h3>Aggregate Products</h3>
+                                <button><a href="#">Learn More!</a></button>
+                            </article>
+                        </div>
+                        <!--Recycled Products Slide-->
+                        <div class="intro-swiper-slide swiper-slide" id="recycled-services-slide">
+                            <article class="intro-slider-heading">
+                                <h3>Recycled Products</h3>
+                                <button><a href="#">Learn More!</a></button>
+                            </article>
+                        </div>
+                        <!--Product Calculators Slide-->
+                        <div class="intro-swiper-slide swiper-slide" id="calculator-services-slide">
+                            <article class="intro-slider-heading">
+                                <h3>Featured Projects</h3>
+                                <button><a href="#">Click to View!</a></button>
+                            </article>
+                        </div>
+                        <!--Career Opportunities Slide-->
+                        <div class="intro-swiper-slide swiper-slide" id="career-services-slide">
+                            <article class="intro-slider-heading">
+                                <h3>Career Opportunities</h3>
+                                <button><a href="#">Learn More!</a></button>
+                            </article>
+                        </div>
+                    </div>
+                    <!--Prev/Next buttons-->
+                    <div class="intro-swiper-prev swiper-button-prev"></div>
+                    <div class="intro-swiper-next swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -49,5 +116,9 @@
     <!--JavaScript files-->
     <script src="./js/jquery.js"></script>
     <script src="./js/mobile-toggle.js" async defer></script>
+    <!--Swiper JS script file-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!--JavaScript file containing the swipers-->
+    <script src="./js/swiper.index.js"></script>
 </body>
 </html>
