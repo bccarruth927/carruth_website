@@ -28,8 +28,11 @@ header .heading {
   align-items: center;
 }
 header .logo {
-  font-size: 1.25rem;
   padding: 7.5px 0 7.5px 10px;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
   color: #fff;
 }
 @media only screen and (min-width: 768px) {
@@ -37,7 +40,7 @@ header .logo {
     flex: 1;
   }
 }
-main #landing {
+main #landing-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,63 +54,66 @@ main #landing {
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
-  main #landing {
+  main #landing-section {
     justify-content: flex-start;
     height: 820px;
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.75) 40%, transparent), url("../imgs/bg6.JPG");
   }
 }
 @media only screen and (min-width: 1200px) {
-  main #landing {
+  main #landing-section {
     height: 912px;
   }
 }
-main #landing article {
+main #landing-section article {
   width: 85%;
   color: #fff;
 }
 @media only screen and (min-width: 768px) {
-  main #landing article {
+  main #landing-section article {
     text-align: left;
     width: 75%;
     padding-left: 1rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main #landing article {
+  main #landing-section article {
     width: 50%;
     padding-left: 2rem;
   }
 }
-main #landing article h1 {
+main #landing-section article h1 {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 2rem;
 }
 @media only screen and (min-width: 768px) {
-  main #landing article h1 {
+  main #landing-section article h1 {
     font-size: 2.5rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main #landing article h1 {
+  main #landing-section article h1 {
     font-size: 3rem;
   }
 }
-main #landing article p {
+main #landing-section article p {
   padding: 1rem 0;
   line-height: 1.6rem;
 }
 @media only screen and (min-width: 768px) {
-  main #landing article p {
+  main #landing-section article p {
     font-size: 1.25rem;
     line-height: 2rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main #landing article p {
+  main #landing-section article p {
     font-size: 1.5rem;
   }
 }
-main #landing article #cta {
+main #landing-section article #cta {
   display: block;
   width: 80%;
   margin: 3rem auto;
@@ -120,13 +126,13 @@ main #landing article #cta {
   border-radius: 15px;
 }
 @media only screen and (min-width: 768px) {
-  main #landing article #cta {
+  main #landing-section article #cta {
     margin: 3rem 0;
     width: 60%;
     text-align: center;
   }
 }
-main #landing #scroll-hook {
+main #landing-section #scroll-hook {
   position: absolute;
   top: 800px;
   display: block;
@@ -136,13 +142,87 @@ main #landing #scroll-hook {
   color: #2CA555;
 }
 @media only screen and (min-width: 768px) {
-  main #landing #scroll-hook {
+  main #landing-section #scroll-hook {
     top: 780px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main #landing #scroll-hook {
+  main #landing-section #scroll-hook {
     top: 850px;
     font-size: 3rem;
   }
+}
+main nav {
+  width: 100%;
+}
+main nav .services-swiper {
+  width: 100%;
+  padding: 3rem 0;
+}
+main nav .services-swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width: 768px) {
+  main nav .services-swiper-slide {
+    width: 400px;
+    height: 250px;
+  }
+}
+main nav .services-swiper-slide article {
+  width: 100%;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+main nav .services-swiper-slide article h3 {
+  text-align: center;
+  color: #F0F1E8;
+}
+@media only screen and (min-width: 768px) {
+  main nav .services-swiper-slide article h3 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main nav .services-swiper-slide article h3 {
+    font-size: 1.75rem;
+  }
+}
+main nav .services-swiper-slide article a {
+  display: block;
+  margin: 1.25rem auto;
+  padding: 0.5rem 0;
+  width: 50%;
+  text-decoration: none;
+  text-align: center;
+  background-color: #2CA555;
+  color: #F0F1E8;
+}
+@media only screen and (min-width: 768px) {
+  main nav .services-swiper-slide article a {
+    margin: 2rem auto;
+    font-size: 1.25rem;
+  }
+}
+main nav #concrete-services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg1.jpg");
+}
+main nav #aggregate-services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg2.jpg");
+}
+main nav #recycled-services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg3.jpg");
+}
+main nav #featured-projects {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg5.jpg");
+}
+main nav #career-services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg4.jpg");
 }

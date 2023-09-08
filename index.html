@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/brands.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/solid.css">
+    <!--Link for the Swiper JS CDN CSS stylsheet-->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 
 <!--Body section-->
@@ -19,13 +21,14 @@
     <!--Main header with logo and contact-->
     <header>
         <div class="heading">
-            <div class="logo"><h3>Carruth & Son Concrete</h3></div>
+            <h3 class="logo">Carruth & Son Concrete</h3>
         </div>
     </header>
 
     <!--Main content-->
     <main>
-        <section id="landing">
+        <!--The Landing Page section (first thing the user sees when the page loads)-->
+        <section id="landing-section">
             <article>
                 <h1>
                     Your Source for Dependable Ready Mix Concrete
@@ -37,6 +40,62 @@
             </article>
             <a href="#" id="scroll-hook"><i class="fa fa-angle-down"></i></a>
         </section>
+
+        <!--The Services navigation card slider-->
+        <nav>
+            <!--Swiper container-->
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper services-swiper-wrapper">
+                    <!--Concrete Services slide-->
+                    <div class="swiper-slide services-swiper-slide" id="concrete-services">
+                        <article>
+                            <h3>
+                                Ready Mix Concrete
+                            </h3>
+                            <a href="#">Learn More!</a>
+                        </article>
+                    </div>
+                    <!--Aggregate Services slide-->
+                    <div class="swiper-slide services-swiper-slide" id="aggregate-services">
+                        <article>
+                            <h3>
+                                Aggregate Products
+                            </h3>
+                            <a href="#">Learn More!</a>
+                        </article>
+                    </div>
+                    <!--Recycled Services slide-->
+                    <div class="swiper-slide services-swiper-slide" id="recycled-services">
+                        <article>
+                            <h3>
+                                Recycled Products
+                            </h3>
+                            <a href="#">Learn More!</a>
+                        </article>
+                    </div>
+                    <!--Featured Projects slide-->
+                    <div class="swiper-slide services-swiper-slide" id="featured-projects">
+                        <article>
+                            <h3>
+                                Featured Projects
+                            </h3>
+                            <a href="#">Learn More!</a>
+                        </article>
+                    </div>
+                    <!--Career Services slide-->
+                    <div class="swiper-slide services-swiper-slide" id="career-services">
+                        <article>
+                            <h3>
+                                Career Opportunities
+                            </h3>
+                            <a href="#">Learn More!</a>
+                        </article>
+                    </div>
+                </div>
+                <!--Swiper pagination-->
+                <div class="swiper-pagination"></div>
+            </div>
+        </nav>
     </main>
 
     <footer>
@@ -45,5 +104,8 @@
 
     <!--JavaScript files-->
     <script src="./js/jquery.js"></script>
+    <script src="./js/services.swiper.js" async defer></script>
+    <!--JavaScript file for Swiper JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
