@@ -43,8 +43,8 @@ main #landing {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 670px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), transparent), url("../imgs/bg1.jpg");
+  height: 844px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75) 40%, transparent), url("../imgs/bg6.JPG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,11 +53,13 @@ main #landing {
 @media only screen and (min-width: 768px) {
   main #landing {
     justify-content: flex-start;
+    height: 820px;
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.75) 40%, transparent), url("../imgs/bg6.JPG");
   }
 }
 @media only screen and (min-width: 1200px) {
   main #landing {
-    height: 940px;
+    height: 912px;
   }
 }
 main #landing article {
@@ -73,7 +75,8 @@ main #landing article {
 }
 @media only screen and (min-width: 1200px) {
   main #landing article {
-    width: 40%;
+    width: 50%;
+    padding-left: 2rem;
   }
 }
 main #landing article h1 {
@@ -107,7 +110,7 @@ main #landing article p {
 main #landing article #cta {
   display: block;
   width: 80%;
-  margin: 1rem auto;
+  margin: 3rem auto;
   padding: 1rem 0;
   background-color: #2CA555;
   text-decoration: none;
@@ -115,27 +118,31 @@ main #landing article #cta {
   font-weight: 700;
   color: #fff;
   border-radius: 15px;
-  box-shadow: 7px 7px #135529;
 }
 @media only screen and (min-width: 768px) {
   main #landing article #cta {
-    margin: 1rem 0;
+    margin: 3rem 0;
     width: 60%;
     text-align: center;
   }
 }
 main #landing #scroll-hook {
   position: absolute;
-  top: 630px;
+  top: 800px;
   display: block;
   width: 100%;
   text-decoration: none;
   font-size: 2rem;
-  color: #fff;
+  color: #2CA555;
+}
+@media only screen and (min-width: 768px) {
+  main #landing #scroll-hook {
+    top: 780px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   main #landing #scroll-hook {
-    top: 880px;
+    top: 850px;
     font-size: 3rem;
   }
 }
