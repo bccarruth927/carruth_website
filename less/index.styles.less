@@ -1,8 +1,13 @@
-//Variables elements
+//Colors variables
 @brand-color: #135529;
 @contrast-color: #FFFBCE;
 @primary-neutral: #F0F1E8;
 @primary-action: #2CA555;
+
+//Screen size variables
+@tablet-size: 768px;
+@laptop-size: 992px;
+@large-screen-size: 1200px;
 
 //Imported fonts
 @import url("https://use.typekit.net/fwv7ydk.css");
@@ -23,406 +28,138 @@ html, body {
     letter-spacing: 0.1em;
 }
 
-nav {
-    background: @brand-color;
-    padding: 0 1rem;
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    //border: 1px solid red;
 
-    a {
-        //Basic styling
-        color: white;
-        text-decoration: none;
-    }
-
-    .menu, .submenu {
-        //Basic styling
-        list-style-type: none;
-    }
-
-    .menu {
-        //Mobile styling
+    .heading {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-
-        //Tablet styling
-        @media (min-width: 700px) {
-            justify-content: center;
-        }
-
-        //Desktop styling
-        @media (min-width: 960px) {
-            align-items: flex-start;
-            flex-wrap: nowrap;
-            background: none;
-        }
-
-        li a {
-            //Mobile styling
-            display: block;
-            padding: 15px 5px;
-        }
-
-        li.subitem a {
-            //Mobile styling
-            padding: 15px;
-        }
-
-        li.button a {
-            //Tablet styling
-            @media (min-width: 700px) {
-                padding: 10px 15px;
-                margin: 5px 0;
-            }
-        }
     }
 
     .logo {
-        //Basic styling
-        font-family: "futura-pt", sans-serif;
-        font-weight: 700;
-        font-style: normal;
         font-size: 1.25rem;
-        padding: 7.5px 10 7.5px 0;
+        padding: 7.5px 0 7.5px 10px;
+        color: #fff;
 
         //Tablet styling
-        @media (min-width: 700px) {
+        @media only screen and (min-width: @tablet-size) {
             flex: 1;
         }
-
-        //Desktop styling
-        @media (min-width: 960px) {
-            order: 0;
-        }
-    }
-
-    .toggle {
-        //Mobile styling
-        order: 1;
-        font-size: 1.25rem;
-
-        //Tablet styling
-        @media (min-width: 700px) {
-            flex: 1;
-            text-align: right;
-            order: 2;
-        }
-
-        //Desktop styling
-        @media (min-width: 960px) {
-            display: none;
-        }
-    }
-
-    .item {
-        //Basic styling
-        padding: 10px;
-
-        //Mobile styling
-        order: 3;
-        width: 100%;
-        text-align: center;
-        display: none;
-
-        //Desktop styling
-        @media (min-width: 960px) {
-            order: 1;
-            position: relative;
-            display: block;
-            width: auto;
-        }
-    }
-
-    .item.button {
-        //Basic styling
-        padding: 9px 5px;
-
-        //Mobile styling
-        order: 2;
-
-        //Tablet styling
-        @media (min-width: 700px) {
-            width: auto;
-            order: 1;
-            display: block;
-        }
-    }
-
-    .button {
-        //Desktop styling
-        @media (min-width: 960px) {
-            order: 2;
-        }
-    }
-
-    .button.secondary {
-        border-bottom: 1px @contrast-color solid;
-
-        //Tablet styling
-        @media (min-width: 700px) {
-            border: none;
-
-            a {
-                background: @primary-action;
-                border: 1px @primary-neutral solid;
-            }
-
-            a:hover {
-                background: @brand-color;
-                border: 1px @contrast-color solid;
-                color: @contrast-color;
-            }
-        }
-    }
-
-    .item:not(.button) a:hover, .item a:hover::after {
-        //Basic styling
-        border-bottom: 1px @contrast-color solid;
-        color: @contrast-color;
-    }
-
-    .active .item {
-        //Mobile styling
-        display: block;
-    }
-
-    //Submenu styling
-    .submenu {
-        //Basic styling
-        display: none;
-    }
-
-    .submenu-active .submenu {
-        display: block;
-
-        //Desktop styling
-        @media (min-width: 960px) {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 68px;
-            z-index: 2;
-            background: @brand-color;
-        }
-    }
-
-    .submenu-active {
-        background-color: @primary-action;
-        border-radius: 3px;
-
-        //Desktop styling
-        @media (min-width: 960px) {
-            border-radius: 0;
-        }
-    }
-
-    .has-submenu a i {
-        padding-left: 5px;
-    }
-
-    .subitem a {
-        padding: 10px 15px;
     }
 }
 
 main {
 
-    #introduction {
-        //Introduction responsive flex container
-        .intro-container {
-            @media (min-width: 700px) {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                height: 710px;
-                //border: 1px red solid;
-            }
+    #landing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 670px;
+        background-image: linear-gradient(rgba(0,0,0,0.75), transparent), url("../imgs/bg1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        //border: 1px solid blue;
 
-            @media (min-width: 960px) {
-                height: 720px;
-            }
+        //Tablet sizing
+        @media only screen and (min-width: @tablet-size) {
+            justify-content: flex-start;
         }
 
-        //Introduction heading styling
-        .intro-heading {
-            margin: 0 2rem 2rem 2rem;
+        //Large Screen sizing
+        @media only screen and (min-width: @large-screen-size) {
+            height: 940px;
+        }
 
-            //Tablet and Desktop styling
-            @media (min-width: 700px) {
-                display: flex;
-                align-items: center;
-                margin: 2rem 0;
-                padding: 0 2rem;
-                width: 45%;
+        article {
+            width: 85%;
+            color: #fff;
+
+            //Tablet sizing
+            @media only screen and (min-width: @tablet-size) {
+                text-align: left;
+                width: 75%;
+                padding-left: 1rem;
+            }
+
+            //Large screen sizing
+            @media only screen and (min-width: @large-screen-size) {
+                width: 40%;
             }
 
             h1 {
-                //Mobile styling
-                padding: 1.25rem 0 1.5rem 0;
-                font-family: "futura-pt", sans-serif;
-                font-weight: 700;
-                font-style: normal;
-                font-size: 1.75rem;
-                color: @brand-color;
+                font-size: 2rem;
 
-                //Tablet styling
-                @media (min-width: 700px) {
-                    font-size: 2.25rem;
+                //Tablet sizing
+                @media only screen and (min-width: @tablet-size) {
+                    font-size: 2.5rem;
                 }
 
-                //Desktop styling
-                @media (min-width: 960px) {
-                    font-size: 2.75rem;
+                //Large screen sizing
+                @media only screen and (min-width: @large-screen-size) {
+                    font-size: 3rem;
                 }
             }
 
             p {
-                //Mobile styling
-                font-size: 1.1rem;
-                padding: 0.5rem 0;
+                padding: 1rem 0;
                 line-height: 1.6rem;
 
-                //Tablet styling
-                @media (min-width: 700px) {
-                    font-size: 1.5rem;
-                    line-height: 1.6rem;
-                }
-
-                //Desktop styling
-                @media (min-width: 960px) {
-                    font-size: 2rem;
-                    line-height: 2.3rem;
-                }
-            }
-
-            button {
-                margin: 2rem 0;
-                padding: 1rem 0;
-                width: 100%;
-                text-align: center;
-                font-family: "futura-pt", sans-serif;
-                font-weight: 700;
-                font-style: normal;
-                font-size: 1.25rem;
-                background-color: @primary-action;
-                border: none;
-                border-radius: 15px;
-
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                }
-
-                a:hover {
-                    color: @contrast-color;
-                }
-            }
-
-            button:hover {
-                box-shadow: 2px 2px 5px #000;
-            }
-        }
-
-        //Introduction card swiper
-        .intro-swiper {
-            width: 100%;
-            margin: 2rem 0;
-
-            @media (min-width: 700px) {
-                width: 55%;
-                margin: auto 0;
-            }
-        }
-
-        .intro-swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 450px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            @media (min-width: 700px) {
-                height: 500px;
-            }
-
-            .intro-slider-heading {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                width: 100%;
-
-                h3 {
-                    margin-bottom: 3rem;
-                    width: 100%;
-                    font-family: "futura-pt", sans-serif;
-                    font-weight: 700;
-                    font-style: normal;
-                    font-size: 1.5rem;
-                    color: #fff;
-                    text-align: center;
-                    text-shadow: 2px 2px @brand-color;
-                }
-    
-                button {
-                    background: @primary-action;
-                    border: none;
-                    padding: 5px 10px;
-                    font-family: "futura-pt", sans-serif;
-                    font-weight: 400;
-                    font-style: normal;
+                //Tablet sizing
+                @media only screen and (min-width: @tablet-size) {
                     font-size: 1.25rem;
-                    box-shadow: 4px 4px @brand-color;
-                    cursor: pointer;
-
-                    a {
-                        text-decoration: none;
-                        color: #fff;
-                    }
-
-                    a:hover {
-                        color: @contrast-color;
-                    }
+                    line-height: 2rem;
                 }
 
-                button:hover {
-                    color: @contrast-color;
+                //Large Screen sizing
+                @media only screen and (min-width: @large-screen-size) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            #cta {
+                display: block;
+                width: 80%;
+                margin: 1rem auto;
+                padding: 1rem 0;
+                background-color: @primary-action;
+                text-decoration: none;
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: #fff;
+                border-radius: 15px;
+                box-shadow: 7px 7px @brand-color;
+
+                //Tablet sizing
+                @media only screen and (min-width: @tablet-size) {
+                    margin: 1rem 0;
+                    width: 60%;
+                    text-align: center;
                 }
             }
         }
 
-        //Slider card backgrounds
-        #concrete-services-slide {
-            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg1.jpg");
-        }
+        #scroll-hook {
+            position: absolute;
+            top: 630px;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            font-size: 2rem;
+            color: #fff;
 
-        #aggregate-services-slide {
-            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg2.jpg");
-        }
-
-        #recycled-services-slide {
-            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg3.jpg");
-        }
-
-        #calculator-services-slide {
-            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg4.jpg");
-        }
-
-        #career-services-slide {
-            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url("../imgs/bg5.jpg");
-        }
-
-        //Intro swiper navigation controls
-        .intro-swiper-prev, .intro-swiper-next {
-            //Mobile styling
-            display: none !important;
-
-            //Tablet and Desktop styling
-            @media (min-width: 700px) {
-                display: block !important;
-                color: @primary-action !important;
+            //Large screen sizing
+            @media only screen and (min-width: @large-screen-size) {
+                top: 880px;
+                font-size: 3rem;
             }
         }
     }
