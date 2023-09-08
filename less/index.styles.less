@@ -259,5 +259,20 @@ main {
         #career-services {
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../imgs/bg4.jpg");
         }
+
+        //Next/Prev navigation styling for tablet and large screen
+        #services-next, #services-prev {
+            display: none !important;
+
+            @media only screen and (min-width: @tablet-size) {
+                display: block !important;
+                color: @brand-color !important;
+            }
+        }
+
+        //Pagination styling
+        #services-pagination {
+            color: @brand-color !important;
+        }
     }
 }

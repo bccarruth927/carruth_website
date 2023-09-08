@@ -226,3 +226,17 @@ main nav #featured-projects {
 main nav #career-services {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg4.jpg");
 }
+main nav #services-next,
+main nav #services-prev {
+  display: none !important;
+}
+@media only screen and (min-width: 768px) {
+  main nav #services-next,
+  main nav #services-prev {
+    display: block !important;
+    color: #135529 !important;
+  }
+}
+main nav #services-pagination {
+  color: #135529 !important;
+}
