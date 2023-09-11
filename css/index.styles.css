@@ -168,12 +168,12 @@ main nav .services-swiper-slide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-@media only screen and (min-width: 768px) {
-  main nav .services-swiper-slide {
-    width: 400px;
-    height: 250px;
-  }
+  /*
+            @media only screen and (min-width: @tablet-size) {
+                width: 400px;
+                height: 250px;
+            }
+            */
 }
 main nav .services-swiper-slide article {
   width: 100%;
@@ -184,16 +184,16 @@ main nav .services-swiper-slide article {
 main nav .services-swiper-slide article h3 {
   text-align: center;
   color: #F0F1E8;
-}
-@media only screen and (min-width: 768px) {
-  main nav .services-swiper-slide article h3 {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  main nav .services-swiper-slide article h3 {
-    font-size: 1.75rem;
-  }
+  /*
+                    @media only screen and (min-width: @tablet-size) {
+                        font-size: 1.5rem;
+                    }
+
+                    //Large screen styling
+                    @media only screen and (min-width: @large-screen-size) {
+                        font-size: 1.75rem;
+                    }
+                    */
 }
 main nav .services-swiper-slide article a {
   display: block;
@@ -204,12 +204,12 @@ main nav .services-swiper-slide article a {
   text-align: center;
   background-color: #2CA555;
   color: #F0F1E8;
-}
-@media only screen and (min-width: 768px) {
-  main nav .services-swiper-slide article a {
-    margin: 2rem auto;
-    font-size: 1.25rem;
-  }
+  /*
+                    @media only screen and (min-width: @tablet-size) {
+                        margin: 2rem auto;
+                        font-size: 1.25rem;
+                    }
+                    */
 }
 main nav #concrete-services {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg1.jpg");
