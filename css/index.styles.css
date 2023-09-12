@@ -155,11 +155,18 @@ main #landing-section #scroll-hook {
 main nav {
   width: 100%;
 }
+@media only screen and (min-width: 768px) {
+  main nav {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 main nav .services-swiper {
   width: 100%;
   padding: 3rem 0;
 }
 main nav .services-swiper-slide {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,12 +175,12 @@ main nav .services-swiper-slide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*
-            @media only screen and (min-width: @tablet-size) {
-                width: 400px;
-                height: 250px;
-            }
-            */
+}
+@media only screen and (min-width: 768px) {
+  main nav .services-swiper-slide {
+    width: 375px;
+    height: 250px;
+  }
 }
 main nav .services-swiper-slide article {
   width: 100%;
@@ -184,16 +191,16 @@ main nav .services-swiper-slide article {
 main nav .services-swiper-slide article h3 {
   text-align: center;
   color: #F0F1E8;
-  /*
-                    @media only screen and (min-width: @tablet-size) {
-                        font-size: 1.5rem;
-                    }
-
-                    //Large screen styling
-                    @media only screen and (min-width: @large-screen-size) {
-                        font-size: 1.75rem;
-                    }
-                    */
+}
+@media only screen and (min-width: 768px) {
+  main nav .services-swiper-slide article h3 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main nav .services-swiper-slide article h3 {
+    font-size: 1.75rem;
+  }
 }
 main nav .services-swiper-slide article a {
   display: block;
@@ -204,12 +211,12 @@ main nav .services-swiper-slide article a {
   text-align: center;
   background-color: #2CA555;
   color: #F0F1E8;
-  /*
-                    @media only screen and (min-width: @tablet-size) {
-                        margin: 2rem auto;
-                        font-size: 1.25rem;
-                    }
-                    */
+}
+@media only screen and (min-width: 768px) {
+  main nav .services-swiper-slide article a {
+    margin: 2rem auto;
+    font-size: 1.25rem;
+  }
 }
 main nav #concrete-services {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg1.jpg");
@@ -226,19 +233,57 @@ main nav #featured-projects {
 main nav #career-services {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/bg4.jpg");
 }
-main nav #services-next,
-main nav #services-prev {
-  display: none !important;
+main nav .swiper-controls {
+  position: relative;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main nav .swiper-controls .swiper-button-next {
+  display: none;
 }
 @media only screen and (min-width: 768px) {
-  main nav #services-next,
-  main nav #services-prev {
-    display: block !important;
-    color: #135529 !important;
+  main nav .swiper-controls .swiper-button-next {
+    left: 60% !important;
+    transform: translateX(-60%) !important;
   }
 }
-main nav #services-pagination {
-  color: #135529 !important;
+@media only screen and (min-width: 992px) {
+  main nav .swiper-controls .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+    display: block;
+    cursor: pointer;
+  }
+}
+main nav .swiper-controls .swiper-button-prev {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  main nav .swiper-controls .swiper-button-prev {
+    left: 40% !important;
+    transform: translateX(-40%) !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  main nav .swiper-controls .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+    display: block;
+    cursor: pointer;
+  }
+}
+main nav .swiper-button-next::after,
+main nav .swiper-button-prev::after {
+  font-size: 2rem;
+  color: #135529;
+}
+main nav .swiper-controls .swiper-pagination {
+  position: relative;
+}
+main nav .swiper-controls .swiper-pagination .swiper-pagination-bullet {
+  background: #135529;
 }
 main #about {
   width: 100%;
