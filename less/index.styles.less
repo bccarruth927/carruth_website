@@ -179,12 +179,21 @@ main {
     nav {
         width: 100%;
 
+        //Tablet and large screen styling
+        @media only screen and (min-width: @tablet-size) {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        //Services swiper container styling
         .services-swiper {
             width: 100%;
             padding: 3rem 0;
         }
 
+        //Individual services swiper slides styling
         .services-swiper-slide {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -195,13 +204,12 @@ main {
             background-size: cover;
 
             //Tablet styling
-            /*
             @media only screen and (min-width: @tablet-size) {
-                width: 400px;
+                width: 375px;
                 height: 250px;
             }
-            */
-
+            
+            //Slide content styling
             article {
                 width: 100%;
                 font-family: "futura-pt", sans-serif;
@@ -213,7 +221,6 @@ main {
                     color: @primary-neutral;
 
                     //Tablet styling
-                    /*
                     @media only screen and (min-width: @tablet-size) {
                         font-size: 1.5rem;
                     }
@@ -222,7 +229,7 @@ main {
                     @media only screen and (min-width: @large-screen-size) {
                         font-size: 1.75rem;
                     }
-                    */
+                    
                 }
 
                 a {
@@ -236,12 +243,11 @@ main {
                     color: @primary-neutral;
 
                     //Tablet styling
-                    /*
                     @media only screen and (min-width: @tablet-size) {
                         margin: 2rem auto;
                         font-size: 1.25rem;
                     }
-                    */
+                    
                 }
             }
         }
@@ -267,19 +273,62 @@ main {
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../imgs/bg4.jpg");
         }
 
-        //Next/Prev navigation styling for tablet and large screen
-        #services-next, #services-prev {
-            display: none !important;
+        //Slider navigation and pagination controls
+        .swiper-controls {
+            position: relative;
+            bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        //Styling for the Next navigation element
+        .swiper-controls .swiper-button-next {
+            display: none;
 
             @media only screen and (min-width: @tablet-size) {
-                display: block !important;
-                color: @brand-color !important;
+                left: 60% !important;
+                transform: translateX(-60%) !important;
+            }
+
+            @media only screen and (min-width: @laptop-size) {
+                left: 70% !important;
+                transform: translateX(-70%) !important;
+                display: block;
+                cursor: pointer;
             }
         }
 
-        //Pagination styling
-        #services-pagination {
-            color: @brand-color !important;
+        //Styling for the Prev navigation element
+        .swiper-controls .swiper-button-prev {
+            display: none;
+
+            @media only screen and (min-width: @tablet-size) {
+                left: 40% !important;
+                transform: translateX(-40%) !important;
+            }
+
+            @media only screen and (min-width: @laptop-size) {
+                left: 30% !important;
+                transform: translateX(-30%) !important;
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        //Styling for the size and color of the Navigation elements
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 2rem;
+            color: @brand-color;
+        }
+
+        //Styling for the pagination
+        .swiper-controls .swiper-pagination {
+            position: relative;
+        }
+
+        .swiper-controls .swiper-pagination .swiper-pagination-bullet{
+            background: @brand-color;
         }
     }
 
