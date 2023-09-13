@@ -5,13 +5,13 @@ $(document).ready(() => {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
-        loop: true,
         slidesPerView: 'auto',
+        spaceBetween: 40,
         coverflowEffect: {
             rotate: 0,
             stretch: 0,
-            depth: 100,
-            modifier: 2.5,
+            depth: 150,
+            modifier: 1,
         },
         pagination: {
             el: ".swiper-pagination",
